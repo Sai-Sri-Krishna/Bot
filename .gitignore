@@ -1,0 +1,51 @@
+# ==========================================
+# NEC AI Voice Assistant — Root Gitignore
+# ==========================================
+
+# IDEs and System files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Node / Angular
+**/node_modules/
+**/.angular/
+**/dist/
+**/tmp/
+out-tsc/
+bazel-out/
+
+# Python / FastAPI
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.pytest_cache/
+**/.venv/
+**/venv/
+**/.env
+
+# Java / Maven / Spring Boot
+**/target/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+**/.mvn/
+.metadata/
+bin/
+dependency-reduced-pom.xml
+
+# Exclude FastAPI backend as requested (only pushing Spring Boot and Angular)
+nec-backend-ai/

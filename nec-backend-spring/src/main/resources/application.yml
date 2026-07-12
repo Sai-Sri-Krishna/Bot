@@ -1,0 +1,44 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: nec-backend-spring
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/nec_ai_db}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:Password}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:bXktc3VwZXItc2VjcmV0LWtleS1mb3ItbmVjLWFpLXZvaWNlLWFzc2lzdGFudC0yMDI2LXNlY3VyZQ==}
+    expiration-ms: 86400000  # 24 hours
+
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:4200}
+
+  admin:
+    email: ${ADMIN_EMAIL:nrtec2k26@gmail.com}
+    password: ${ADMIN_PASSWORD:2026}
+    name: NRTEC Admin
+
+logging:
+  level:
+    com.nec: INFO
+    org.springframework.security: WARN

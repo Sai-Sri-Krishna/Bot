@@ -1,0 +1,6 @@
+{
+  "name": "Narasaraopeta Engineering College AI Voice Assistant",
+  "description": "An AI Voice Assistant for Narasaraopeta Engineering College (NEC) to answer student questions about admissions, placements, courses, and calendars instantly using voice and text.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
