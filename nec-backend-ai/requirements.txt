@@ -4,4 +4,4 @@ sqlalchemy==2.0.31
 psycopg[binary]==3.2.4
 google-generativeai==0.8.2
 python-dotenv==1.0.1
-pydantic==2.8.2
+pydantic>=2.10.0
